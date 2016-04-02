@@ -1,8 +1,5 @@
 # RADARE 3
-
-----------
-
-# Welcome to the Future of Reverse Engineering!
+### Welcome to the Future of Reverse Engineering!
 
 Radare3 is the one and only interactive, programmable, extendible, multi-processor disassembler and debugger you will ever need to use!
 
