@@ -35,7 +35,7 @@ if [[ ! -d "$IDADIR" ]]; then
 fi
 
 if [[ ! -d "$IDADIR" ]]; then
-    echo "I tried to find IDA, but it seems you installed it somewhere nobody in their right might would, so you'll just have to pass me the path instead"
+    echo "I tried to find IDA, but it seems you installed it somewhere nobody in their right mind would, so you'll just have to pass me the path instead"
     exit 1
 fi
 
@@ -52,17 +52,17 @@ fi
 
 FOUND=
 if [[ -f "$IDADIR/idaq.exe"  ]]; then
-    echo -e "#!/bin/sh\ncd $IDADIR\nwine idaq.exe" > $INSTALL_PATH
+    echo -e "#!/bin/sh\ncd \"$IDADIR\"\nwine idaq.exe" > $INSTALL_PATH
     chmod 755 $INSTALL_PATH
-    echo "Successfuly installed r3!"
+    echo "Successfully installed r3!"
     FOUND=1
 fi
 
 INSTALL_PATH=$(printf "%s%s" $INSTALL_PATH "x64")
 if [[ -f "$IDADIR/idaq64.exe"  ]]; then
-    echo -e "#!/bin/sh\ncd $IDADIR\nwine idaq64.exe" > $INSTALL_PATH
+    echo -e "#!/bin/sh\ncd \"$IDADIR\"\nwine idaq64.exe" > $INSTALL_PATH
     chmod 755 $INSTALL_PATH
-    echo "Successfuly installed r3x64!"
+    echo "Successfully installed r3x64!"
     FOUND=1
 fi
 
